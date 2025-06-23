@@ -102,6 +102,37 @@ Personal cheat sheet with Nmap scans used in CTFs and pentests.
 
 ---
 
+# 🖥️ Screen + Nmap Cheat Sheet
+Personal cheat sheet for running persistent Nmap scans inside `screen` terminal sessions. Perfect for long scans on remote servers or CTF labs.
+
+---
+
+## ⚙️ Quick Setup & Usage
+
+```bash
+# 1. Install screen (if not already)
+sudo apt update && sudo apt install screen
+
+# 2. Start a screen session named "nmapscan"
+screen -S nmapscan
+
+# 3. Inside screen, run your Nmap scan (example: SSH scan across local subnet)
+nmap -Pn -p 22 192.168.1.1-254 -oN scan22.txt
+
+# 4. Detach from screen (let the scan run in background)
+# Press: Ctrl + A, then D
+
+# 5. Later, reattach to screen session
+screen -r nmapscan
+
+# (If multiple sessions)
+screen -ls
+screen -r [session_id]
+
+# 6. When done, exit the screen session from inside
+exit
+
+
 ## 💬 Author's Note
 
 > This list was compiled for your own use and practice through CTF challenges and test environments like TryHackMe and Hack The Box.  
