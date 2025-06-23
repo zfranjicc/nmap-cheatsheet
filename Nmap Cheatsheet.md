@@ -115,6 +115,7 @@ Why useful in CyberSec:
 If you connect via SSH, and accidentally disconnect, your Nmap session will be terminated without a screen. With the screen, you can go back and see the results.
 
 ## ⚙️ Quick Setup & Usage
+```bash
 
 # 1. Install screen (if not already)
 sudo apt update && sudo apt install screen
@@ -138,6 +139,7 @@ screen -r [session_id]
 # 6. When done, exit the screen session from inside
 exit
 
+---
 
 ## 💬 Author's Note
 
