@@ -1,4 +1,4 @@
-# 🛠️ Nmap Cheat Sheet
+# 🛠️ Nmap Cheatsheet
 Personal cheat sheet with Nmap scans used in CTFs and pentests.
 
 ---
@@ -107,9 +107,15 @@ Personal cheat sheet for running persistent Nmap scans inside `screen` terminal 
 
 ---
 
+🔹 screen
+What is it for:
+It allows you to run long-running commands (like nmap scans) in a new "virtual" terminal session that doesn't stop even if you close the terminal or SSH session.
+
+Why useful in CyberSec:
+If you connect via SSH, and accidentally disconnect, your Nmap session will be terminated without a screen. With the screen, you can go back and see the results.
+
 ## ⚙️ Quick Setup & Usage
 
-```bash
 # 1. Install screen (if not already)
 sudo apt update && sudo apt install screen
 
@@ -137,4 +143,5 @@ exit
 
 > This list was compiled for your own use and practice through CTF challenges and test environments like TryHackMe and Hack The Box.  
 > Do not use these commands on networks without permission. 🛡️
+
 
