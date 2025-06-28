@@ -1,6 +1,18 @@
 # 🛠️ Nmap Cheatsheet
 Personal cheat sheet with Nmap scans used in CTFs and pentests.
 
+
+## 📚 Table of Contents
+- [What is Nmap?](#what-is-nmap)
+- [🔎 Basic Nmap Scans](#-basic-nmap-scans)
+- [⚙️ Scan Types (-s flags)](#️-scan-types--s-flags)
+- [🧩 Additional Flags](#-additional-flags-and-their-meaning)
+- [🏆 Top 30 Nmap Commands](#-top-30-nmap-commands)
+- [🔐 Behind Proxy or Firewall](#-nmap-commands-for-targets-behind-proxy-or-firewall)
+- [🖥️ Screen + Nmap](#️-screen--nmap-cheat-sheet)
+- [💬 Author's Note](#-authors-note)
+
+
 ### What is NMAP? 
 
 Nmap (short for Network Mapper) is a powerful open-source tool used for:
