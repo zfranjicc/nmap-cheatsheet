@@ -107,7 +107,7 @@ Personal cheat sheet for running persistent Nmap scans inside `screen` terminal 
 
 ---
 
-🔹 screen
+## 🔹 screen
 What is it for:
 It allows you to run long-running commands (like nmap scans) in a new "virtual" terminal session that doesn't stop even if you close the terminal or SSH session.
 
@@ -115,35 +115,42 @@ Why useful in CyberSec:
 If you connect via SSH, and accidentally disconnect, your Nmap session will be terminated without a screen. With the screen, you can go back and see the results.
 
 ## ⚙️ Quick Setup & Usage
-```bash
 
-# 1. Install screen (if not already)
+
+- 1. Install screen (if not already)
+```
 sudo apt update && sudo apt install screen
-
-# 2. Start a screen session named "nmapscan"
+```
+- 2. Start a screen session named "nmapscan"
+```
 screen -S nmapscan
-
-# 3. Inside screen, run your Nmap scan (example: SSH scan across local subnet)
+```
+- 3. Inside screen, run your Nmap scan (example: SSH scan across local subnet)
+```
 nmap -Pn -p 22 192.168.1.1-254 -oN scan22.txt
+```
+- 4. Detach from screen (let the scan run in background)
 
-# 4. Detach from screen (let the scan run in background)
-# Press: Ctrl + A, then D
+ Press: Ctrl + A, then D
 
-# 5. Later, reattach to screen session
+- 5. Later, reattach to screen session
+```
 screen -r nmapscan
-
-# (If multiple sessions)
+```
+' (If multiple sessions)
 screen -ls
 screen -r [session_id]
 
 # 6. When done, exit the screen session from inside
+```
 exit
-
----
+```
 
 ## 💬 Author's Note
 
-> This list was compiled for your own use and practice through CTF challenges and test environments like TryHackMe and Hack The Box.  
-> Do not use these commands on networks without permission. 🛡️
+## ⚠️ Important Notes
+> This guide is for educational purposes only and for testing in your own controlled environments.
+> Do NOT use these techniques on networks or machines without explicit permission!
+🛡️
 
 
