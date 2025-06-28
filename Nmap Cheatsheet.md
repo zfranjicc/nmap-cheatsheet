@@ -1,6 +1,22 @@
 # 🛠️ Nmap Cheatsheet
 Personal cheat sheet with Nmap scans used in CTFs and pentests.
 
+### What is NMAP? 
+
+Nmap (short for Network Mapper) is a powerful open-source tool used for:
+
+- Network discovery – finding devices on a network
+
+- Port scanning – identifying open ports on a target system
+
+- Service detection – figuring out what services (e.g., HTTP, FTP) are running on which ports
+
+- Operating system detection – guessing the OS of a remote device
+
+- Vulnerability scanning (with scripts)
+Example:
+`nmap 10.10.12.229`
+  
 ---
 
 ## 🔎 Basic Nmap Scans
@@ -117,23 +133,23 @@ If you connect via SSH, and accidentally disconnect, your Nmap session will be t
 ## ⚙️ Quick Setup & Usage
 
 
-- 1. Install screen (if not already)
+- 1 - Install screen (if not already)
 ```
 sudo apt update && sudo apt install screen
 ```
-- 2. Start a screen session named "nmapscan"
+- 2 - Start a screen session named "nmapscan"
 ```
 screen -S nmapscan
 ```
-- 3. Inside screen, run your Nmap scan (example: SSH scan across local subnet)
+- 3 - Inside screen, run your Nmap scan (example: SSH scan across local subnet)
 ```
 nmap -Pn -p 22 192.168.1.1-254 -oN scan22.txt
 ```
-- 4. Detach from screen (let the scan run in background)
+- 4 - Detach from screen (let the scan run in background)
 
  Press: Ctrl + A, then D
 
-- 5. Later, reattach to screen session
+- 5 - Later, reattach to screen session
 ```
 screen -r nmapscan
 ```
@@ -141,7 +157,8 @@ screen -r nmapscan
 screen -ls
 screen -r [session_id]
 
-# 6. When done, exit the screen session from inside
+- 6 - When done, exit the screen session from inside
+
 ```
 exit
 ```
